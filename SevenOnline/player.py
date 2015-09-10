@@ -31,7 +31,7 @@ class Player(object):
   def MakeWonder(num, side)
     self.wonder = Wonder(num, side)
     # Add a single resource of value 1 for a wonder
-	  self.AddPermanentResources(self.wonder.resource, 1)
+    self.AddPermanentResources(self.wonder.resource, 1)
 
   def set_name(self, namee):
     """modifies the users name."""
@@ -55,21 +55,21 @@ class Player(object):
 """ this should be included in Player I think, not sure if the indentation is right might be in "AddPermanentResources" lol """		
 class Wonder(object):
   def __init__(self, wonder_num, side);
-	  self.wonder_num = wonder_num
-	  self.name = constants.WONDER_NAME[wonder_num] # name of wonder
-	  self.side = side # side of wonder
-	  self.resource = wonder_num #wonder's intrinsic resource
-	  self.wonder_cost = []
-	  self.wonder_cost = GetWonderCost(self.num, self.side) #array containing the wonders cost for each level
-	  self.wonder_level = 0 #wonder's current built level
+    self.wonder_num = wonder_num
+    self.name = constants.WONDER_NAME[wonder_num] # name of wonder
+    self.side = side # side of wonder
+    self.resource = wonder_num #wonder's intrinsic resource
+    self.wonder_cost = []
+    self.wonder_cost = GetWonderCost(self.num, self.side) #array containing the wonders cost for each level
+    self.wonder_level = 0 #wonder's current built level
 			
 				
-  def GetWonderCost(num, side):
-	  """need some way to import the costs, or else hard code, should have an array for each of the levels"""
-	  return 
+ def GetWonderCost(num, side):
+    """need some way to import the costs, or else hard code, should have an array for each of the levels"""
+    return 
 			
   def IncrementWonder(self):
-	  self.wonder_level += 1
+    self.wonder_level += 1
 
 
 	
