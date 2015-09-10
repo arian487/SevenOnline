@@ -17,3 +17,10 @@ WONDER_NAME = {
   5: 'Rhodes',
   6: 'Alexandria'
  }
+
+ SCIENCE_TYPE = {
+  0: 'Wheel',
+  1: 'Tablet',
+  2: 'Compas',
+  3: 'Multi'
+ }
