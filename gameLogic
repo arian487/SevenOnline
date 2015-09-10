@@ -1,0 +1,60 @@
+Game Logic:
+
+Pick Cities
+Draft Leaders
+Draft Age 1
+Draft Age 2
+Draft Age 3
+Score
+
+
+
+Add N User(s)
+shuffle civs
+deal 2 civs to each
+user picks civ, remove from pool
+user picks side
+wait for all
+link user to their (and neighbours) board	
+give starting money to each	
+
+loop x=0:3
+	create x age deck
+	shuffle x age deck
+	deal #Age Cards (4,7,7,7)
+	loop y=1:(3.6.6.6)		
+		show user current hand
+		user picks card (remove card from  hand)
+		user picks card action (wonder,build,discard)
+		Case Wonder or Build
+			Determine cost of card (or wonder level)
+			check if user meets cost (if free, then yes!)
+				Yes: Flag Cost Met
+				No: check for tech prereq
+				  : if Y Flag Cost Met
+			check if user meets cost 
+				Yes: Flag Cost Met
+				No: Ask for user to assign "/" card resources
+				  : Add those resources temporarily
+			check if user meets cost
+				Yes: Flag Cost Met
+				No: activate SpecialCardFunction that allows user to select resources (caravansary, alexandria wonder ability, discount leaders etc)
+				  : Add those resources temporarily	
+			check if user meets cost
+				Yes: Flag Cost Met
+				No: activate SpecialCardFunction that discounts trading (olympus trading, east TP, leader)
+				  : show trading function, user selects trading choices
+				  : calculate #goldToPayL and R deduct and remember
+				  : Add those resources bought temporarily
+			check if user meets cost
+				Yes: Flag Cost met
+				No: throw them back to pick card action
+		wait for all
+		complete actions on cards in order and add to board
+		resolve immediate actions from cards played (searching discard, getting coin, etc)
+		pass hands to the next player
+		if y=(3,6,6,6)
+			discard remaining hands
+	x != 0
+		fight
+score
