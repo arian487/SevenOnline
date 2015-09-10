@@ -28,11 +28,22 @@ class Player(object):
     self.set_name('player.%s' % puid[:4])
 
   def set_name(self, namee):
-  	"""modifies the users name."""
-  	self.name = name
-  	return self.name
+    """modifies the users name."""
+    self.name = name
+    return self.name
 
   def ping(self):
     """Updates the user to appear currently active."""
     self.last_active = time.time()
+
+  def AddCoins(self, added):
+    self.coins += added
+
+  def AddPermanentResources(resource_code, value):
+    """Adding a permanent, viewable resource to the field."""
+    if resource code not in self.resources:
+      self.resources[resource_code] = value
+    else:
+        self.resources[resource_code] += value
+
 
