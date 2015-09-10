@@ -54,22 +54,22 @@ class Player(object):
 
 """ this should be included in Player I think, not sure if the indentation is right might be in "AddPermanentResources" lol """		
 class Wonder(object):
-	def __init__(self, wonder_num, side);
-		self.wonder_num = wonder_num
-		self.name = constants.WONDERNAME[wonder_num] # name of wonder
-		self.side = side # side of wonder
-		self.resource = wonder_num #wonder's intrinsic resource
-		self.wonder_cost = []
-		self.wonder_cost = GetWonderCost(self.num, self.side) #array containing the wonders cost for each level
-		self.wonder_level = 0 #wonder's current built level
+  def __init__(self, wonder_num, side);
+	  self.wonder_num = wonder_num
+	  self.name = constants.WONDER_NAME[wonder_num] # name of wonder
+	  self.side = side # side of wonder
+	  self.resource = wonder_num #wonder's intrinsic resource
+	  self.wonder_cost = []
+	  self.wonder_cost = GetWonderCost(self.num, self.side) #array containing the wonders cost for each level
+	  self.wonder_level = 0 #wonder's current built level
 			
 				
-	def GetWonderCost(num, side):
-		"""need some way to import the costs, or else hard code, should have an array for each of the levels"""
-		return 
+  def GetWonderCost(num, side):
+	  """need some way to import the costs, or else hard code, should have an array for each of the levels"""
+	  return 
 			
-	def IncrementWonder(self):
-			self.wonder_level += 1
+  def IncrementWonder(self):
+	  self.wonder_level += 1
 
 
 	
